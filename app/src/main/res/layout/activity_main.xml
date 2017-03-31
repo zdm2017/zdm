@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <Button
+        android:id="@+id/start2"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/darkblue_btn_bg"
+        android:padding="10dip"
+        android:text="会计从业题库"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/start1"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/darkblue_btn_bg"
+        android:padding="10dip"
+        android:text="初级会计题库"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+</RelativeLayout>

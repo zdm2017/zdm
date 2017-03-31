@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/App.BottomSheet/App.BottomSheet.iml" filepath="$PROJECT_DIR$/App.BottomSheet/App.BottomSheet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KJExam.iml" filepath="$PROJECT_DIR$/KJExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/applock/applock.iml" filepath="$PROJECT_DIR$/applock/applock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/applock.teacher/applock.teacher.iml" filepath="$PROJECT_DIR$/applock.teacher/applock.teacher.iml" />
+    </modules>
+  </component>
+</project>

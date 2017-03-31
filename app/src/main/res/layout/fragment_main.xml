@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/main_bg"
+        android:gravity="center"
+        android:text="龙腾会计题库"
+        android:textColor="@color/white" />
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/main_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/main_bg"
+        app:layout_collapseMode="pin"
+        app:tl_indicator_color="@color/white"
+        app:tl_indicator_height="0dp"
+        app:tl_textSelectColor="#fdfdfd"
+        app:tl_textUnselectColor="#94afaf"
+        app:tl_textsize="12sp"
+        app:tl_underline_color="@color/white"
+        app:tl_underline_gravity="TOP"
+        app:tl_underline_height="1dp"
+
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="欢迎使用本会计题库，全部考试原题，更新日期为：2017年3月，本题库无需联网，无时间限制，全国通用。"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea">
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#288df5">
+
+        <LinearLayout
+            android:id="@+id/activity_prepare_test_upLayout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:src="@drawable/ic_practice_up_subject" />
+
+            <TextView
+                style="@style/menu_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_menu_margin_8"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:text="上一题" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_prepare_test_totalLayout"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:src="@drawable/ic_practice_tatal_index" />
+
+            <TextView
+                android:id="@+id/activity_prepare_test_totalTv"
+                style="@style/menu_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_menu_margin_8"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:text="4/32" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_prepare_test_errorLayout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/menu_bottom_errorIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:src="@drawable/ic_practice_test_error" />
+
+            <TextView
+                android:id="@+id/menu_bottom_errorTV"
+                style="@style/menu_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_menu_margin_8"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:text="我的错题" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/activity_prepare_test_submitLayout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:src="@drawable/vote_submit_finish" />
+
+            <TextView
+
+                style="@style/menu_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_menu_margin_8"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:text="交卷" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/activity_prepare_test_nextLayout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/menu_bottom_nextIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:src="@drawable/ic_practice_next_subject" />
+
+            <TextView
+                android:id="@+id/menu_bottom_nextTV"
+                style="@style/menu_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/home_menu_margin_8"
+                android:layout_marginTop="@dimen/home_menu_margin_5"
+                android:text="下一题" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/activity_prepare_test_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/home_menu_margin_8"
+                    android:textColor="@color/practice_test_no_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/activity_prepare_test_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/home_menu_margin_8"
+                    android:textColor="@color/practice_test_content_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- 单选 -->
+
+            <LinearLayout
+                android:id="@+id/activity_prepare_test_radioBtnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/activity_prepare_test_layout_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/answer_choose_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/home_menu_margin_8">
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_practice_test_normal" />
+
+                    <TextView
+                        android:id="@+id/vote_submit_select_text_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:text="您给出的回答选项？"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_a_"
+                        android:layout_width="150dip"
+                        android:layout_height="75dip"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_practice_test_normal"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_prepare_test_layout_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/answer_choose_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/home_menu_margin_8">
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_practice_test_normal" />
+
+                    <TextView
+                        android:id="@+id/vote_submit_select_text_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:text="您给出的回答选项？"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_b_"
+                        android:layout_width="150dip"
+                        android:layout_height="75dip"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_practice_test_normal"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_prepare_test_layout_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/answer_choose_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/home_menu_margin_8">
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_practice_test_normal" />
+
+                    <TextView
+                        android:id="@+id/vote_submit_select_text_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:text="您给出的回答选项？"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_c_"
+                        android:layout_width="150dip"
+                        android:layout_height="75dip"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_practice_test_normal"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_prepare_test_layout_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/answer_choose_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/home_menu_margin_8">
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_practice_test_normal" />
+
+                    <TextView
+                        android:id="@+id/vote_submit_select_text_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:text="您给出的回答选项？"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_d_"
+                        android:layout_width="150dip"
+                        android:layout_height="75dip"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_practice_test_normal"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_prepare_test_layout_e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/answer_choose_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/home_menu_margin_8">
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_practice_test_normal" />
+
+                    <TextView
+                        android:id="@+id/vote_submit_select_text_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:text="您给出的回答选项？"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/vote_submit_select_image_e_"
+                        android:layout_width="150dip"
+                        android:layout_height="75dip"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_practice_test_normal"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--分析题-->
+
+            <LinearLayout
+                android:id="@+id/activity_fxt_radioBtnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/home_menu_margin_8"
+                    android:text="第一题"
+                    android:textColor="@color/practice_test_result_text"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/radioGroup1_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/radioBtn1_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn1_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="B" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn1_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn1_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="D" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/result_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/lucky_text_red"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/home_menu_margin_8"
+                    android:text="第二题"
+                    android:textColor="@color/practice_test_result_text"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/radioGroup2_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/radioBtn2_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn2_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="B" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn2_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn2_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="D" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/result_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textColor="@color/lucky_text_red"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/home_menu_margin_8"
+                    android:text="第三题"
+                    android:textColor="@color/practice_test_result_text"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/radioGroup3_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/radioBtn3_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn3_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="B" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn3_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn3_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="D" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/result_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+
+                        android:textColor="@color/lucky_text_red"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/home_menu_margin_8"
+                    android:text="第四题"
+                    android:textColor="@color/practice_test_result_text"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/radioGroup4_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/radioBtn4_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn4_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="B" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn4_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn4_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="D" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/result_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+
+                        android:textColor="@color/lucky_text_red"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ll_05_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/home_menu_margin_8"
+                    android:text="第五题"
+                    android:textColor="@color/practice_test_result_text"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_05_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/radioGroup5_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/radioBtn5_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn5_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="B" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn5_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C" />
+
+                        <CheckBox
+                            android:id="@+id/radioBtn5_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="D" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/result_05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/lucky_text_red"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_make_fxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/main_bg"
+                    android:text="确认"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+            <!---end-->
+            <!--计算题-->
+            <LinearLayout
+                android:id="@+id/activity_jst_radioBtnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:layout_weight="1"
+                        android:text="第一题"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_01"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/main_bg"
+                        android:text="增加"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_01_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner01_01"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner01_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst01_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_01_02"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner01_01_02"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner01_02_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst01_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_01_03"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner01_01_03"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner01_02_03"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst01_03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_01_04"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner01_01_04"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner01_02_04"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst01_04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_01_05"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner01_01_05"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner01_02_05"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst01_05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_01_06"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner01_01_06"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner01_02_06"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst01_06"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:layout_weight="1"
+                        android:text="第二题"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_02"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/main_bg"
+                        android:text="增加"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_02_01"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner02_01"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner02_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst02_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_02_02"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner02_01_02"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner02_02_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst02_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_02_03"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner02_01_03"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner02_02_03"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst02_03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_02_04"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner02_01_04"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner02_02_04"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst02_04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_02_05"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner02_01_05"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner02_02_05"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst02_05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_02_06"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner02_01_06"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner02_02_06"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst02_06"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:layout_weight="1"
+                        android:text="第三题"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_03"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/main_bg"
+                        android:text="增加"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_03_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner03_01"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner03_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst03_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_03_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner03_01_02"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner03_02_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst03_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_03_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner03_01_03"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner03_02_03"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst03_03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_03_04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner03_01_04"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner03_02_04"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst03_04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_03_05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner03_01_05"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner03_02_05"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst03_05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_03_06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner03_01_06"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner03_02_06"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst03_06"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:layout_weight="1"
+                        android:text="第四题"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_04"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/main_bg"
+                        android:text="增加"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_04_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner04_01"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner04_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst04_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_04_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner04_01_02"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner04_02_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst04_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_04_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner04_01_03"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner04_02_03"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst04_03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_04_04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner04_01_04"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner04_02_04"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst04_04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_04_05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner04_01_05"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner04_02_05"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst04_05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_04_06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner04_01_06"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner04_02_06"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst04_06"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/home_menu_margin_8"
+                        android:layout_weight="1"
+                        android:text="第五题"
+                        android:textColor="@color/practice_test_result_text"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_05"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/main_bg"
+                        android:text="增加"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_05_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner05_01"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner05_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst05_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_05_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner05_01_02"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner05_02_02"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst05_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_05_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner05_01_03"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner05_02_03"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst05_03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_05_04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner05_01_04"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner05_02_04"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst05_04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_05_05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner05_01_05"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner05_02_05"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst05_05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_05_06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner05_01_06"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner05_02_06"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/jst05_06"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="金额"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_make_jst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/main_bg"
+                    android:text="确认"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <!--end-->
+            <!-- 错题分析 -->
+
+            <LinearLayout
+                android:id="@+id/activity_prepare_test_wrongLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/btn_height"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_10"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_practice_test_analyze" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:background="@drawable/ic_practice_test_explaindetail"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activity_prepare_test_explaindetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/practice_test_result_detail_text" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
